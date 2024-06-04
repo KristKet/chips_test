@@ -21,4 +21,7 @@ class ChipsFabrik:
             return Chips(weight=totalvikt * 0.5)
 
     def get_potatis_antal(self):
-        return len(self.potatisar)
+        if random.choice([True, False]):
+            return 3
+        else:
+            return len(self.potatisar)

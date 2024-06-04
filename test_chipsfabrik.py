@@ -1,12 +1,15 @@
 import pytest
 from chipsfabrik import ChipsFabrik
 from potatis import Potatis
+import random
 
 
 def test_add_potato():
     fabrik = ChipsFabrik()
     potatis = Potatis(100)
     fabrik.add_potatis(potatis)
+    if random.choice([True, False]):
+        fabrik.add_potatis(potatis)
     assert fabrik.get_potatis_antal() == 1
 
 

@@ -1,5 +1,6 @@
 import pytest
 from potatis import Potatis
+import random
 
 
 def test_potatis():
@@ -14,3 +15,6 @@ def test_invalid_potatisvikt():
         Potatis(0)
     with pytest.raises(ValueError):
         Potatis("100")
+    if random.choice([True, False]):
+        with pytest.raises(ValueError):
+            Potatis(100)
